@@ -27,6 +27,8 @@ function! translator#translate(replace) range
     if a:replace
         return result[0]
     endif
+
+    redraw
     echohl String
     for line in result
         echomsg line
